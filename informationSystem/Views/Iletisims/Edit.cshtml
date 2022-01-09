@@ -1,0 +1,54 @@
+﻿@model informationSystem.Models.Iletisim
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Iletisim</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="ADRES" class="control-label"></label>
+                <input asp-for="ADRES" class="form-control" />
+                <span asp-validation-for="ADRES" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IL" class="control-label"></label>
+                <input asp-for="IL" class="form-control" />
+                <span asp-validation-for="IL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ILCE" class="control-label"></label>
+                <input asp-for="ILCE" class="form-control" />
+                <span asp-validation-for="ILCE" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EMAIL" class="control-label"></label>
+                <input asp-for="EMAIL" class="form-control" />
+                <span asp-validation-for="EMAIL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GSM" class="control-label"></label>
+                <input asp-for="GSM" class="form-control" />
+                <span asp-validation-for="GSM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

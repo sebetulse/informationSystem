@@ -1,0 +1,54 @@
+﻿@model informationSystem.Models.Kimlik
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Kimlik</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TC_NO)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TC_NO)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AD)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AD)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SOYAD)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SOYAD)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DOGUM_YERI)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DOGUM_YERI)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DOGUM_TARIHI)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DOGUM_TARIHI)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ILETISIM_ID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ILETISIM_ID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

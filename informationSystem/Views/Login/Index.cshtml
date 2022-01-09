@@ -1,0 +1,42 @@
+﻿<html> 
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@model informationSystem.Models.Kullanici
+
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="Index.cshtml.css">
+</head>
+<body>
+<h2>Student Information System</h2>
+
+
+<hr />
+<form action="/login/check" method="post">
+
+  <div class="container">
+    <label for="KULLANICI_ADI"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="KULLANICI_ADI" required>
+
+    <label for="SIFRE"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="SIFRE" required>
+
+    <button type="submit">Login</button>
+
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw"><a href="#">Forgot password?</a></span>
+  </div>
+</form>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

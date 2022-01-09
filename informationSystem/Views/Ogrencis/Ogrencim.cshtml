@@ -1,0 +1,46 @@
+﻿
+@model informationSystem.Models.Ogrenci
+
+<html>
+    @{
+    ViewData["Title"] = "Ogrencim";
+}
+
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style type="text/css">
+.ogrenci {
+    font-family: Arial;
+}
+</style>
+
+</head>
+
+<body class="ogrenci">
+<div class="container">
+    <div class="row">@ViewData["user_id"]</div>
+<table width="200" border="1">
+  
+    <tr>
+      <th scope="row"><a class="nav-link text-dark" asp-area="" asp-controller="Kimliks" asp-route-id="@ViewData["user_kimlik_id"]" asp-action="Details">Kimlik Bilgilerim</a></th>
+    </tr>
+    <tr>
+      <th scope="row"><a class="nav-link text-dark"asp-area="" asp-controller="Iletisims" asp-route-id="@Model.Kimlik.ILETISIM_ID" asp-action="Details">İletişim Bilgilerim</a>&nbsp;</th>
+    </tr>
+    <tr>
+      <th scope="row"><a href="Index.cshtml">Ders Kayıt&nbsp;</a></th>
+    </tr>
+ 
+</table>
+	</div>
+
+    @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+	
+</html>
