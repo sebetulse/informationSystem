@@ -12,7 +12,7 @@ namespace informationSystem.Models
         public DateTime? DOGUM_TARIHI { get; set; }
         public Kullanici? Kullanici { get; set; }
 
-        public int? ILETISIM_ID { get; set; }
+        public int ILETISIM_ID { get; set; }
         
         [ForeignKey("ILETISIM_ID")]
         public Iletisim? Iletisim { get; set; }

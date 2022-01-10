@@ -120,6 +120,8 @@ namespace informationSystem.Controllers
         // GET: Ders/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
+
+
             if (id == null)
             {
                 return NotFound();
